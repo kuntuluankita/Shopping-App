@@ -34,6 +34,11 @@ class HomeScreenViewController: UIViewController {
         topCartUpdate()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        CoredataManager.shared.updateCoreDataCategories(with: categoryArray)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         categoryCollectionView.reloadData()
@@ -42,7 +47,7 @@ class HomeScreenViewController: UIViewController {
     
     // MARK: - Methods
     
-    // MARK: Gradient Layer Setup
+    // Gradient Layer Setup
     func addGradientColor () {
         // Create a gradient layer
         let gradientLayer = CAGradientLayer()
@@ -58,7 +63,7 @@ class HomeScreenViewController: UIViewController {
         
         for subview in headerView.subviews {
             if subview != gradientLayer {
-                subview.layer.zPosition = 1 // Set the zPosition to 1 to make sure it's above the gradient layer
+                subview.layer.zPosition = 1
             }
         }
         
@@ -107,69 +112,25 @@ class HomeScreenViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(categoryViewTapped))
         categoryView.addGestureRecognizer(tapGesture)
     }
-   
-    // MARK: CoreData
-    func isDataLoadedInCoreData() -> Bool {
-        let fetchRequest: NSFetchRequest<CategoryModel> = CategoryModel.fetchRequest()
-        do {
-            // Execute fetch request
-            let categories = try context.fetch(fetchRequest)
-            // If there are any categories fetched, return true (data is already loaded)
-            return !categories.isEmpty
-        } catch {
-            // Error occurred while fetching, return false (assume data is not loaded)
-            print("Error fetching categories: \(error)")
-            return false
-        }
-    }
     
-    func loadToCoreData() {
-        for item in categoryArray {
-            let category = CategoryModel(context: context)
-            category.id = Int64(item.id ?? 0)
-            category.headerName = item.headerName
-            category.isExpandable = item.isExpandable
-            if let items = item.items {
-                // Convert and add each ItemModel to the category
-                for item in items {
-                    let itemModel = ItemModel(context: context)
-                    itemModel.id = Int64(item.id ?? 0)
-                    itemModel.productName = item.productName
-                    itemModel.icon = item.icon
-                    itemModel.price = item.price ?? 0
-                    itemModel.cartItemCount = Int64(item.cartItemCount)
-                    itemModel.isFavorite = item.isFavorite
-                    
-                    // Add the item to the category's items set
-                    category.addToItems(itemModel)
-                }
-            }
-        }
-        
-        do {
-            try context.save()
-        } catch  {
-            print("Error")
-        }
-    }
-    
-    func coreDataSetUp() {
+    func loadFromJSON() {
         //Data load from Json
         JSONLoader.loadJSONData()
         self.categoryArray = MainProductViewModel.shared.categoryArray ?? []
-        
-        // Check if data is already loaded into Core Data
-        if isDataLoadedInCoreData() {
-            // Data is already loaded, no need to load again
-            print("Data is already loaded into Core Data")
-        } else {
-            // Data is not loaded, proceed to load
-            loadToCoreData()
-        }
     }
     
-    
-    
+    func coreDataSetUp() {
+        // Check if data is already loaded into Core Data
+        if CoredataManager.shared.isDataLoadedInCoreData() {
+            print("Data is already loaded into Core Data")
+            self.categoryArray = CoredataManager.shared.coreDataCategoryArray
+            MainProductViewModel.shared.categoryArray = CoredataManager.shared.coreDataCategoryArray
+        } else {
+            loadFromJSON()
+            CoredataManager.shared.loadToCoreData(categoryArray: self.categoryArray)
+        }
+    }
+
     // MARK: - Button Actions
     @IBAction func favoriteButtonAction(_sender: UIButton) {
         if let favoriteVC = storyboard?.instantiateViewController(identifier: "FavoriteViewController") as? FavoriteViewController {
@@ -241,6 +202,5 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - 32, height: 50)
     }
-    
 }
 

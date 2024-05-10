@@ -12,8 +12,8 @@ class CartViewModel {
     init() {
         cartArray = getCartArray()
     }
-    
-    var categoryArray = MainProductViewModel.shared.categoryArray ?? []
+
+    var categoryArray = CoredataManager.shared.coreDataCategoryArray
     var cartArray: [Item]? = []
     
     func getCartArray() -> [Item]? {

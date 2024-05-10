@@ -9,7 +9,7 @@ import Foundation
 
 class FavoritesViewModel {
 
-    var categoryArray = MainProductViewModel.shared.categoryArray ?? []
+    var categoryArray = CoredataManager.shared.coreDataCategoryArray
     var favoriteArray: [Item]? = []
     
     func getFavoriteArray() -> [Item]? {

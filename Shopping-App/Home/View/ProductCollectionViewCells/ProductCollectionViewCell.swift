@@ -56,12 +56,13 @@ class ProductCollectionViewCell: UICollectionViewCell {
     // MARK: - Button Actions
     @IBAction func favoriteButtonAction(_ sender: UIButton) {
         item?.isFavorite.toggle()
+        CoredataManager.shared.updateCoreDataCategories(with: MainProductViewModel.shared.categoryArray ?? [])
         updateFavoriteButton()
     }
     
     @IBAction func addToCarrtButtonAction(_ sender: UIButton) {
         item?.cartItemCount += 1
+        CoredataManager.shared.updateCoreDataCategories(with: MainProductViewModel.shared.categoryArray ?? [])
         self.addToCartClosure?()
-        
     }
 }

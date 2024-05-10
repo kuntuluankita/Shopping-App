@@ -25,6 +25,13 @@ class Category: Codable {
         case id, items
         case headerName = "name"
     }
+    
+    init(id: Int?, headerName: String?, items: [Item]? = nil, isExpandable: Bool) {
+        self.id = id
+        self.headerName = headerName
+        self.items = items
+        self.isExpandable = isExpandable
+    }
 }
 
 // MARK: - Item
@@ -39,5 +46,14 @@ class Item: Codable {
     enum CodingKeys: String, CodingKey {
         case id, icon, price
         case productName = "name"
+    }
+    
+    init(id: Int? = nil, productName: String? = nil, icon: String? = nil, price: Double? = nil, cartItemCount: Int, isFavorite: Bool) {
+        self.id = id
+        self.productName = productName
+        self.icon = icon
+        self.price = price
+        self.cartItemCount = cartItemCount
+        self.isFavorite = isFavorite
     }
 }

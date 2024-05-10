@@ -40,6 +40,7 @@
 		3677EB722BEE3ADE00A6D646 /* ItemModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677EB6E2BEE3ADE00A6D646 /* ItemModel+CoreDataProperties.swift */; };
 		3677EB732BEE3ADE00A6D646 /* CategoryModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677EB6F2BEE3ADE00A6D646 /* CategoryModel+CoreDataClass.swift */; };
 		3677EB742BEE3ADE00A6D646 /* CategoryModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677EB702BEE3ADE00A6D646 /* CategoryModel+CoreDataProperties.swift */; };
+		3677EB782BEE3DAB00A6D646 /* CoredataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677EB772BEE3DAB00A6D646 /* CoredataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		3677EB6E2BEE3ADE00A6D646 /* ItemModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3677EB6F2BEE3ADE00A6D646 /* CategoryModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3677EB702BEE3ADE00A6D646 /* CategoryModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3677EB772BEE3DAB00A6D646 /* CoredataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +114,11 @@
 			children = (
 				3677EB062BEE37C500A6D646 /* AppDelegate.swift */,
 				3677EB082BEE37C500A6D646 /* SceneDelegate.swift */,
-				3677EB242BEE382900A6D646 /* Cart */,
-				3677EB432BEE382A00A6D646 /* Favorite */,
-				3677EB3B2BEE382900A6D646 /* Home */,
 				3677EB2A2BEE382900A6D646 /* Model */,
 				3677EB462BEE382A00A6D646 /* Utility */,
+				3677EB3B2BEE382900A6D646 /* Home */,
+				3677EB432BEE382A00A6D646 /* Favorite */,
+				3677EB242BEE382900A6D646 /* Cart */,
 				3677EB0C2BEE37C500A6D646 /* Main.storyboard */,
 				3677EB122BEE37C700A6D646 /* Assets.xcassets */,
 				3677EB142BEE37C700A6D646 /* LaunchScreen.storyboard */,
@@ -276,6 +278,7 @@
 		3677EB462BEE382A00A6D646 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				3677EB772BEE3DAB00A6D646 /* CoredataManager.swift */,
 				3677EB442BEE382A00A6D646 /* JSONLoader.swift */,
 				3677EB452BEE382A00A6D646 /* shopping.json */,
 			);
@@ -379,6 +382,7 @@
 				3677EB4F2BEE382A00A6D646 /* ShoppingModel.swift in Sources */,
 				3677EB712BEE3ADE00A6D646 /* ItemModel+CoreDataClass.swift in Sources */,
 				3677EB722BEE3ADE00A6D646 /* ItemModel+CoreDataProperties.swift in Sources */,
+				3677EB782BEE3DAB00A6D646 /* CoredataManager.swift in Sources */,
 				3677EB732BEE3ADE00A6D646 /* CategoryModel+CoreDataClass.swift in Sources */,
 				3677EB742BEE3ADE00A6D646 /* CategoryModel+CoreDataProperties.swift in Sources */,
 				3677EB072BEE37C500A6D646 /* AppDelegate.swift in Sources */,
