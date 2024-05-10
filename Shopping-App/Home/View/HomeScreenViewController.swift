@@ -26,8 +26,10 @@ class HomeScreenViewController: UIViewController {
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        addGradientColor ()
-        headerCornerRadius()
+        headerView.backgroundColor = .systemYellow
+        categoryView.layer.cornerRadius = 10
+        // addGradientColor() // Creating Issue
+        // headerCornerRadius()
         collectionViewSetUp()
         addViewTapGesture()
         coreDataSetUp()
@@ -73,7 +75,6 @@ class HomeScreenViewController: UIViewController {
     func headerCornerRadius() {
         let cornerRadius: CGFloat = 16
         let maskLayer = CAShapeLayer()
-        categoryView.layer.cornerRadius = 10
         categoryCollectionView.showsVerticalScrollIndicator = false
         maskLayer.path = UIBezierPath(roundedRect: headerView.bounds,
                                       byRoundingCorners: [.bottomLeft, .bottomRight],

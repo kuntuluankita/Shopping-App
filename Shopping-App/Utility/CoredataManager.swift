@@ -27,6 +27,16 @@ final class CoredataManager {
         }
     }
     
+    func fetchCoreData() {
+        let fetchRequest: NSFetchRequest<CategoryModel> = CategoryModel.fetchRequest()
+        do {
+            let categories = try context.fetch(fetchRequest)
+            coreDataCategoryArray = mapCategoryModelsToCategories(categoryModels: categories)
+        } catch {
+            print("Error fetching categories: \(error)")
+        }
+    }
+    
     func loadToCoreData(categoryArray: [Category]) {
         for item in categoryArray {
             let category = CategoryModel(context: context)

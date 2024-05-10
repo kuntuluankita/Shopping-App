@@ -12,7 +12,7 @@
         <!--Home Screen View Controller-->
         <scene sceneID="BVm-Ns-Nit">
             <objects>
-                <viewController id="3fx-QR-NSV" customClass="HomeScreenViewController" customModule="ShoppingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3fx-QR-NSV" customClass="HomeScreenViewController" customModule="Shopping_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aA1-fn-BsC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
         <!--Favorite View Controller-->
         <scene sceneID="RId-Gh-BPq">
             <objects>
-                <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="een-aZ-zgA" customClass="FavoriteViewController" customModule="ShoppingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="een-aZ-zgA" customClass="FavoriteViewController" customModule="Shopping_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Smc-g1-AM5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +272,7 @@
         <!--Cart View Controller-->
         <scene sceneID="oq6-eB-nkL">
             <objects>
-                <viewController storyboardIdentifier="CartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qkl-Hj-mgE" customClass="CartViewController" customModule="ShoppingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qkl-Hj-mgE" customClass="CartViewController" customModule="Shopping_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aPb-qY-IcH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +441,7 @@
         <!--Category View Controller-->
         <scene sceneID="LkG-I5-Ea4">
             <objects>
-                <viewController storyboardIdentifier="CategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wld-kj-tdo" customClass="CategoryViewController" customModule="ShoppingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wld-kj-tdo" customClass="CategoryViewController" customModule="Shopping_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="ac6-DC-22h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
