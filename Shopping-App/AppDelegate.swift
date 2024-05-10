@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Shopping-App
 //
-//  Created by K Praveen Kumar on 10/05/24.
+//  Created by Kuntulu Ankita on 10/05/24.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        print("URL:", URL.documentsDirectory)
         return true
     }
 

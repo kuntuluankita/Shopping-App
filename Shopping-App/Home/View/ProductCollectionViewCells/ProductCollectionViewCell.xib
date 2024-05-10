@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="ShoppingApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="174" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="174" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nK5-wE-rY5">
+                        <rect key="frame" x="5" y="5" width="164" height="156"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cat-dl-w0I">
+                                <rect key="frame" x="52" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KUV-xA-gaf"/>
+                                    <constraint firstAttribute="width" constant="60" id="yCf-eJ-nZe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7P-Ah-Q1w">
+                                <rect key="frame" x="143" y="5" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Sns-z4-T3V"/>
+                                    <constraint firstAttribute="height" constant="16" id="cMT-fa-PwA"/>
+                                </constraints>
+                                <color key="tintColor" red="0.55686277149999996" green="0.1607843041" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="not_wishlist"/>
+                                <connections>
+                                    <action selector="favoriteButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="71V-WC-znI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrot" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62R-br-PEG">
+                                <rect key="frame" x="5" y="82" width="154" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGD-f9-34D">
+                                <rect key="frame" x="5" y="104.33333333333333" width="37" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSq-vk-Okr">
+                                <rect key="frame" x="138" y="104.66666666666667" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="28s-oG-jkh"/>
+                                    <constraint firstAttribute="height" constant="16" id="dlI-JU-APr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="plus">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addToCarrtButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="T2k-XA-OcK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KGD-f9-34D" firstAttribute="top" secondItem="62R-br-PEG" secondAttribute="bottom" constant="8" id="0d0-S7-d18"/>
+                            <constraint firstItem="62R-br-PEG" firstAttribute="leading" secondItem="nK5-wE-rY5" secondAttribute="leading" constant="5" id="20q-6N-fng"/>
+                            <constraint firstItem="Cat-dl-w0I" firstAttribute="top" secondItem="nK5-wE-rY5" secondAttribute="top" constant="10" id="3dq-30-kZn"/>
+                            <constraint firstItem="Q7P-Ah-Q1w" firstAttribute="top" secondItem="nK5-wE-rY5" secondAttribute="top" constant="5" id="4DR-am-h5C"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7P-Ah-Q1w" secondAttribute="trailing" constant="5" id="HLQ-nf-Gfi"/>
+                            <constraint firstItem="62R-br-PEG" firstAttribute="top" secondItem="Cat-dl-w0I" secondAttribute="bottom" constant="12" id="Kw2-ts-d6Z"/>
+                            <constraint firstAttribute="trailing" secondItem="62R-br-PEG" secondAttribute="trailing" constant="5" id="bqr-Jh-eLB"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KGD-f9-34D" secondAttribute="bottom" constant="12" id="e25-Vj-EDl"/>
+                            <constraint firstItem="VSq-vk-Okr" firstAttribute="bottom" secondItem="KGD-f9-34D" secondAttribute="bottom" constant="2" id="elG-ED-JUP"/>
+                            <constraint firstAttribute="trailing" secondItem="VSq-vk-Okr" secondAttribute="trailing" constant="10" id="jM5-i4-6rs"/>
+                            <constraint firstItem="Cat-dl-w0I" firstAttribute="centerX" secondItem="nK5-wE-rY5" secondAttribute="centerX" id="y0q-vR-PP5"/>
+                            <constraint firstItem="KGD-f9-34D" firstAttribute="leading" secondItem="nK5-wE-rY5" secondAttribute="leading" constant="5" id="zje-ss-Kcf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nK5-wE-rY5" secondAttribute="trailing" constant="5" id="GfT-gp-AOM"/>
+                <constraint firstItem="nK5-wE-rY5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Q0N-SZ-f4M"/>
+                <constraint firstItem="nK5-wE-rY5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="ROR-GY-saA"/>
+                <constraint firstAttribute="bottom" secondItem="nK5-wE-rY5" secondAttribute="bottom" constant="5" id="cx2-UP-QUw"/>
+                <constraint firstItem="nK5-wE-rY5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="gX5-Wz-oEy"/>
+            </constraints>
+            <size key="customSize" width="174" height="166"/>
+            <connections>
+                <outlet property="addButton" destination="VSq-vk-Okr" id="LfB-hh-43Y"/>
+                <outlet property="priceLabel" destination="KGD-f9-34D" id="EAp-fx-nca"/>
+                <outlet property="productImageView" destination="Cat-dl-w0I" id="TuB-TZ-OvQ"/>
+                <outlet property="productNameLabel" destination="62R-br-PEG" id="utE-z2-Dxi"/>
+                <outlet property="productView" destination="nK5-wE-rY5" id="Hdd-Kn-qLV"/>
+                <outlet property="wishListButton" destination="Q7P-Ah-Q1w" id="HTP-mp-Rwp"/>
+            </connections>
+            <point key="canvasLocation" x="192.36641221374046" y="59.859154929577471"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="not_wishlist" width="128" height="128"/>
+        <image name="plus" width="42.666667938232422" height="42.666667938232422"/>
+    </resources>
+</document>

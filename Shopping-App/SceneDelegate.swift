@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Shopping-App
 //
-//  Created by K Praveen Kumar on 10/05/24.
+//  Created by Kuntulu Ankita on 10/05/24.
 //
 
 import UIKit

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView" customModule="ShoppingApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k87-I1-kMS">
+                    <rect key="frame" x="15" y="15.333333333333334" width="38" height="19.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-0p-dDI">
+                    <rect key="frame" x="291" y="20.666666666666668" width="14" height="9"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="CZq-mX-ovj"/>
+                        <constraint firstAttribute="height" constant="9" id="Tcg-RP-VM9"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="chevron.down" catalog="system"/>
+                    </buttonConfiguration>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMe-v7-5Ky">
+                    <rect key="frame" x="15" y="42.666666666666664" width="289" height="1"/>
+                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2I8-xD-9u1"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-ei-vO1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="42.666666666666664"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="categoryExpandButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="1Al-o2-I0A"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="yKc-0p-dDI" secondAttribute="trailing" constant="15" id="0jZ-Ss-MwY"/>
+                <constraint firstItem="ThP-ei-vO1" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="BTG-zV-RZG"/>
+                <constraint firstItem="yMe-v7-5Ky" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="Zue-jZ-mPd"/>
+                <constraint firstAttribute="trailing" secondItem="yMe-v7-5Ky" secondAttribute="trailing" constant="16" id="a6i-Mv-1gC"/>
+                <constraint firstItem="k87-I1-kMS" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="15" id="dxN-NV-5rR"/>
+                <constraint firstItem="ThP-ei-vO1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="j2J-d7-QSs"/>
+                <constraint firstItem="k87-I1-kMS" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="neg-b4-gFW"/>
+                <constraint firstItem="yKc-0p-dDI" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="p6l-dG-tY4"/>
+                <constraint firstItem="yMe-v7-5Ky" firstAttribute="top" secondItem="k87-I1-kMS" secondAttribute="bottom" constant="8" id="pXd-3c-yR9"/>
+                <constraint firstItem="yMe-v7-5Ky" firstAttribute="top" secondItem="ThP-ei-vO1" secondAttribute="bottom" id="q7j-B7-Xbe"/>
+                <constraint firstItem="ThP-ei-vO1" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="uFs-vk-jj4"/>
+            </constraints>
+            <connections>
+                <outlet property="headerLabel" destination="k87-I1-kMS" id="E4A-G0-G6t"/>
+            </connections>
+            <point key="canvasLocation" x="190.83969465648855" y="14.788732394366198"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
