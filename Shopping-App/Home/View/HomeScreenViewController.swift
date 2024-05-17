@@ -43,7 +43,16 @@ class HomeScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        categoryCollectionView.reloadData()
+        let currentOffset = categoryCollectionView.contentOffset
+        
+        UIView.performWithoutAnimation {
+            categoryCollectionView.performBatchUpdates({
+                categoryCollectionView.reloadSections(IndexSet(integersIn: 0..<categoryCollectionView.numberOfSections))
+            }, completion: nil)
+        }
+        
+        categoryCollectionView.setContentOffset(currentOffset, animated: false)
+        
         topCartUpdate()
     }
     

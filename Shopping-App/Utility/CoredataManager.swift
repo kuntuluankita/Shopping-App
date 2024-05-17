@@ -59,6 +59,10 @@ final class CoredataManager {
                 }
             }
         }
+        //If CategoryArray empty initially, assign the passed array
+        if coreDataCategoryArray.isEmpty {
+            coreDataCategoryArray = categoryArray
+        }
         
         do {
             try context.save()

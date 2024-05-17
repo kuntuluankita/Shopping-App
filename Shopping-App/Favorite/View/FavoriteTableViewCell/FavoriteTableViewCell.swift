@@ -46,10 +46,16 @@ class FavoriteTableViewCell: UITableViewCell {
    
     // MARK: - Button Actions
     @IBAction func quantityButtonAction(_ sender: UIButton) {
-        
+        item?.cartItemCount += 1
+        removeFavoriteAndUpdateUI()
+        CoredataManager.shared.updateCoreDataCategories(with: MainProductViewModel.shared.categoryArray ?? [])
     }
     
     @IBAction func favoriteButtonAction(_ sender: UIButton) {
+        removeFavoriteAndUpdateUI()
+    }
+    
+    private func removeFavoriteAndUpdateUI() {
         item?.isFavorite = false
         favClosure?()
     }
